@@ -32,8 +32,8 @@ class RegisterBookUseCaseHandlerTest {
 
     @Test
     void itDoesntCreateTheSameAuthorTwice() {
-        final RegisterBookUseCase aUseCase = new RegisterBookUseCase("Mon livre", "Arnaud", "Super livre", "isbn");
-        final RegisterBookUseCase anotherUseCase = new RegisterBookUseCase("Mon autre livre", "Arnaud", "Super livre", "isbn");
+        final RegisterBookUseCase aUseCase = new RegisterBookUseCase("Mon livre", "Arnaud", "Super livre", "isbn-1");
+        final RegisterBookUseCase anotherUseCase = new RegisterBookUseCase("Mon autre livre", "Arnaud", "Super livre", "isbn-2");
 
         final ISBN firstBookId = handler.handle(aUseCase);
         final ISBN secondBookId = handler.handle(anotherUseCase);
